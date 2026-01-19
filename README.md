@@ -19,21 +19,6 @@
 |-----------------------|------------------------------------------|----------------------|----------------------|
   [**Safe-SAIL**](https://github.com/Alibaba-AAIG/Safe-SAIL)  |  致力于提供透明化的模型可视化，帮助用户理解模型内部的风险概念神经元，从而更好地识别和调试潜在的安全问题。 | 翁佳琪 |阿里巴巴|
   [**SNCE**](https://github.com/Alibaba-AAIG/SNCE)  | 单神经元概念擦除，精准抑制，旨在提供一个高效的单神经元概念擦除框架。它能够精确地抑制或移除模型中单个语义神经元，如同海鞘受到扰动时定向喷出异物，从而无损地剔除模型中可能产生的有害内容，同时完整保留生成内容的质量与美感。|何侵嵚|阿里巴巴|
+  [**LASA**](https://github.com/yangjunx21/LASA)  |针对低资源语种安全性差的问题，对模型进行中间层语义的安全对齐，仅在高资源语种上后训练便可泛化到低资源语种。 |杨峻骁|清华大学|
 
 ---
-
-
-## 🚀 快速开始
-
-```bash
-# 安装水母家族套件
-pip install jellyfish-family
-
-# 启动神经元级安全处理流水线
-from jellyfish import SafetyPipeline
-
-pipeline = SafetyPipeline(
-    model="your-ai-model",
-    components=["visualize", "erase"]  # 加载水母+海鞘组件
-)
-safe_response = pipeline.execute(risky_prompt)
